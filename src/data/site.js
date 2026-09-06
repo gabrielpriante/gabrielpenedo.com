@@ -12,6 +12,9 @@ export const site = {
     cv: "/cv",
   },
   cvFile: "/cv/gabriel-penedo-cv.pdf",
+  ogImage: "/images/og-image.jpg",
+  ogImageAlt:
+    "Oblique aerial view of a riverfront neighborhood, showing a river, bridges, rail lines, industrial buildings, houses, and wooded hillsides.",
   portrait: {
     src: "/images/gabriel-penedo.jpg",
     alt: "Gabriel Penedo standing at a lakeside railing.",
