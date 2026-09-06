@@ -1,7 +1,13 @@
 import Seo from '../components/Seo.jsx';
 import Section from '../components/Section.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
-import { currentResearchIntro, projects, interests } from '../data/research.js';
+import TextWithLinks from '../components/TextWithLinks.jsx';
+import {
+  currentResearchIntro,
+  currentResearchLinks,
+  projects,
+  interests,
+} from '../data/research.js';
 
 export default function Research() {
   return (
@@ -17,7 +23,11 @@ export default function Research() {
       </section>
 
       <Section label="Current Research">
-        <p className="prose-measure">{currentResearchIntro}</p>
+        <TextWithLinks
+          className="prose-measure"
+          text={currentResearchIntro}
+          links={currentResearchLinks}
+        />
         <div className="mt-10 md:mt-12">
           {projects.map((project) => (
             <ProjectCard
