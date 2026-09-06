@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import Section from '../components/Section.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
+import TextWithLinks from '../components/TextWithLinks.jsx';
 import FigurePlaceholder from '../components/FigurePlaceholder.jsx';
 import { site } from '../data/site.js';
-import { currentResearchIntro, projects } from '../data/research.js';
+import {
+  currentResearchIntro,
+  currentResearchLinks,
+  projects,
+} from '../data/research.js';
 
 const personSchema = {
   '@context': 'https://schema.org',
@@ -60,7 +65,11 @@ export default function Home() {
       </section>
 
       <Section label="Current Research">
-        <p className="prose-measure">{currentResearchIntro}</p>
+        <TextWithLinks
+          className="prose-measure"
+          text={currentResearchIntro}
+          links={currentResearchLinks}
+        />
         <div className="mt-10 md:mt-12">
           {projects.map((project) => (
             <ProjectCard
