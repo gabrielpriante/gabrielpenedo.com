@@ -16,6 +16,7 @@ export const projects = [
       {
         src: "/images/canopy-tile.jpg",
         alt: "Nadir aerial image of a mixed forest canopy, with individual tree crowns visible against shadowed gaps between them.",
+        caption: "Image collected by Open Forest Observatory.",
         width: 950,
         height: 950,
       },
