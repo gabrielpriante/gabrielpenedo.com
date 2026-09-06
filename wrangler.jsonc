@@ -1,0 +1,11 @@
+{
+  // Deploys the built site in ./dist as static assets on Cloudflare Workers.
+  // "single-page-application" makes every unmatched path serve index.html,
+  // so /research, /work, /about and /cv resolve on a direct visit or refresh.
+  "name": "gabrielpenedo-com",
+  "compatibility_date": "2026-09-06",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
