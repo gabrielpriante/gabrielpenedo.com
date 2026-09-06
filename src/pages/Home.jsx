@@ -18,7 +18,12 @@ const personSchema = {
 export default function Home() {
   return (
     <>
-      <Seo title="Gabriel Penedo" description={site.defaultDescription} path="/">
+      <Seo
+        title="Gabriel Penedo"
+        description={site.defaultDescription}
+        path="/"
+        ogType="profile"
+      >
         <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
       </Seo>
 
