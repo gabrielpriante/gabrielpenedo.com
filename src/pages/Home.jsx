@@ -20,6 +20,12 @@ const personSchema = {
   sameAs: [site.links.github, site.links.linkedin, site.links.orcid],
 };
 
+const profiles = [
+  { label: 'GitHub', href: site.links.github },
+  { label: 'LinkedIn', href: site.links.linkedin },
+  { label: 'ORCID', href: site.links.orcid },
+];
+
 export default function Home() {
   return (
     <>
@@ -52,6 +58,25 @@ export default function Home() {
                 CV
               </Link>
             </div>
+            <ul className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 list-none m-0 p-0 text-sm text-ink-muted">
+              {profiles.map((profile, index) => (
+                <li key={profile.href} className="flex items-center gap-x-3">
+                  <a
+                    className="link-quiet"
+                    href={profile.href}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {profile.label}
+                  </a>
+                  {index < profiles.length - 1 ? (
+                    <span aria-hidden="true" className="text-rule">
+                      ·
+                    </span>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <FigurePlaceholder
