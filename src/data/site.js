@@ -12,6 +12,12 @@ export const site = {
     cv: "/cv",
   },
   cvFile: "/cv/gabriel-penedo-cv.pdf",
+  portrait: {
+    src: "/images/gabriel-penedo.jpg",
+    alt: "Gabriel Penedo standing at a lakeside railing.",
+    width: 1000,
+    height: 1333,
+  },
   nav: [
     { label: "Home", href: "/" },
     { label: "Research", href: "/research" },
