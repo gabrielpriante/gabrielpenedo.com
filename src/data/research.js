@@ -1,6 +1,18 @@
 export const currentResearchIntro =
   "I am currently working with Dr. Kala Fleming and Dr. Elizabeth Ondula on three interrelated research projects spanning environmental computer vision, field-grounded machine learning, and geospatial decision systems.";
 
+// Phrases inside currentResearchIntro that render as links.
+export const currentResearchLinks = [
+  {
+    match: "Dr. Kala Fleming",
+    href: "https://www.linkedin.com/in/kalafleming/",
+  },
+  {
+    match: "Dr. Elizabeth Ondula",
+    href: "https://www.linkedin.com/in/elizabeth-ondula/",
+  },
+];
+
 // `href` stays undefined until individual project pages exist.
 // `figures` are shown on the Research page only.
 export const projects = [
