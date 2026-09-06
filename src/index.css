@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #FCFCFA;
+    --surface: #FFFFFF;
+    --ink: #14161A;
+    --ink-muted: #5A6069;
+    --rule: #E3E3DE;
+    --accent: #1F3A5F;
+    color-scheme: light;
+  }
+
+  html.dark {
+    --bg: #0E1013;
+    --surface: #14171B;
+    --ink: #E9E9E4;
+    --ink-muted: #9AA1A9;
+    --rule: #262A30;
+    --accent: #93B4D8;
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      font-size: 17px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Source Serif 4', Georgia, Cambria, serif;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .container-page {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  .prose-measure {
+    max-width: 68ch;
+  }
+
+  .section-label {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .link-quiet {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--rule);
+    transition: color 150ms ease, text-decoration-color 150ms ease;
+  }
+
+  .link-quiet:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 50;
+    background-color: var(--surface);
+    color: var(--ink);
+    padding: 12px 16px;
+    border: 1px solid var(--rule);
+  }
+
+  .skip-link:focus {
+    left: 12px;
+    top: 12px;
+  }
+}
