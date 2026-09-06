@@ -26,6 +26,7 @@ export default function Research() {
               summary={project.summary}
               detail={project.detail}
               href={project.href}
+              figures={project.figures}
             />
           ))}
         </div>
