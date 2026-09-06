@@ -1,6 +1,5 @@
 import Seo from '../components/Seo.jsx';
 import Section from '../components/Section.jsx';
-import FigurePlaceholder from '../components/FigurePlaceholder.jsx';
 import { site } from '../data/site.js';
 
 export default function About() {
@@ -14,19 +13,10 @@ export default function About() {
 
       <section className="py-14 md:py-24">
         <h1 className="text-4xl md:text-5xl">About</h1>
-        <div className="mt-10 md:mt-12 grid gap-10 md:grid-cols-[240px_1fr] md:gap-14 md:items-start">
-          <FigurePlaceholder
-            src={site.portrait.src}
-            alt={site.portrait.alt}
-            width={site.portrait.width}
-            height={site.portrait.height}
-            className="max-w-[240px]"
-          />
-          <div className="prose-measure space-y-6">
-            {site.about.map((paragraph) => (
-              <p key={paragraph.slice(0, 32)}>{paragraph}</p>
-            ))}
-          </div>
+        <div className="prose-measure mt-10 space-y-6">
+          {site.about.map((paragraph) => (
+            <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+          ))}
         </div>
       </section>
 
