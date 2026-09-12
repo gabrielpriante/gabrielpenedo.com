@@ -37,6 +37,8 @@ export default function Research() {
               detail={project.detail}
               href={project.href}
               figures={project.figures}
+              comparison={project.comparison}
+              link={project.link}
             />
           ))}
         </div>
