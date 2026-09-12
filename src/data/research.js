@@ -14,7 +14,7 @@ export const currentResearchLinks = [
 ];
 
 // `href` stays undefined until individual project pages exist.
-// `figures` are shown on the Research page only.
+// `figures`, `comparison` and `link` are shown on the Research page only.
 export const projects = [
   {
     id: "sliding-window-instability",
@@ -38,18 +38,44 @@ export const projects = [
     id: "field-grounded-environmental-ai",
     title: "Field-Grounded Environmental AI",
     summary:
-      "A field study exploring whether structured human observations, physical interventions, drone imagery, and high-confidence annotations can improve environmental computer-vision systems.",
+      "A field study exploring whether structured human observations, physical interventions, drone imagery, and high-confidence annotations can improve environmental computer vision systems.",
     detail:
-      "This work examines how field teams can interact with the physical environment and the data-generation process to reduce ambiguity, improve annotation quality, and create more reliable inputs for machine-learning systems.",
+      "This work examines how field teams can interact with the physical environment and the data-generation process to reduce ambiguity, improve annotation quality, and create more reliable inputs for machine learning systems.",
     href: undefined,
     figures: [
       {
-        src: "/images/field-site-nadir.jpg",
-        alt: "Nadir drone image of a street intersection with a grass lot, a canopy tent, parked vehicles, and a long low building.",
+        src: "/images/wilkinsburg-aerial.jpg",
+        alt: "Original DJI Mini 5 Pro aerial image of Wilkinsburg, Pennsylvania.",
+        caption:
+          "Original aerial RGB image. Wilkinsburg, Pennsylvania. Captured with a DJI Mini 5 Pro.",
         width: 1600,
         height: 1200,
       },
     ],
+    comparison: [
+      {
+        label: "SAM2 ONE-SHOT",
+        src: "/images/wilkinsburg-sam2-one-shot.jpg",
+        alt: "One-shot SAM2 segmentation overlay on aerial imagery from Wilkinsburg, Pennsylvania.",
+        caption:
+          "SAM2 one-shot output. Automatic segmentation applied directly to the Wilkinsburg aerial image.",
+        width: 1600,
+        height: 1200,
+      },
+      {
+        label: "SAM2 + CNN",
+        src: "/images/wilkinsburg-sam2-cnn.jpg",
+        alt: "SAM2 segmentation guided by CNN detections on aerial imagery from Wilkinsburg, Pennsylvania.",
+        caption:
+          "SAM2 + CNN model output. CNN detections guide SAM2 segmentation on the same Wilkinsburg aerial image.",
+        width: 1600,
+        height: 1200,
+      },
+    ],
+    link: {
+      label: "View reproducible pipeline on GitHub \u2192",
+      href: "https://github.com/gabrielpriante/urban-tree-vision-baselines",
+    },
   },
   {
     id: "geospatial-decision-systems",
@@ -63,12 +89,16 @@ export const projects = [
       {
         src: "/images/riverfront-oblique.jpg",
         alt: "Oblique aerial view of a riverfront neighborhood, showing a river, bridges, rail lines, industrial buildings, houses, and wooded hillsides.",
+        caption:
+          "Original drone imagery. Surroundings of Braddock Lot. DJI Mini 5 Pro.",
         width: 1600,
         height: 1200,
       },
       {
         src: "/images/built-environment-nadir.jpg",
         alt: "Nadir drone image of a multi-story building flanked by a row of greenhouses on one side and a parking lot on the other.",
+        caption:
+          "Original drone imagery. Bidwell Training Center. DJI Mini 5 Pro.",
         width: 1600,
         height: 1200,
       },
