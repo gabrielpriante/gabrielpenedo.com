@@ -17,24 +17,6 @@ export const currentResearchLinks = [
 // `figures`, `comparison` and `link` are shown on the Research page only.
 export const projects = [
   {
-    id: "sliding-window-instability",
-    title: "Sliding-Window Instability in Environmental Object Detection",
-    summary:
-      "Experimental research examining how an unreported inference parameter changes individual tree-crown detections despite stable aggregate counts.",
-    detail:
-      "The study treats the origin of a sliding-window inference grid as an experimental variable and investigates how apparently minor implementation choices can affect the reproducibility and identity of detections produced by environmental computer-vision systems.",
-    href: undefined,
-    figures: [
-      {
-        src: "/images/canopy-tile.jpg",
-        alt: "Nadir aerial image of a mixed forest canopy, with individual tree crowns visible against shadowed gaps between them.",
-        caption: "Image collected by Open Forest Observatory.",
-        width: 950,
-        height: 950,
-      },
-    ],
-  },
-  {
     id: "field-grounded-environmental-ai",
     title: "Field-Grounded Environmental AI",
     summary:
@@ -76,6 +58,48 @@ export const projects = [
       label: "View reproducible pipeline on GitHub \u2192",
       href: "https://github.com/gabrielpriante/urban-tree-vision-baselines",
     },
+  },
+
+  {
+    id: "sliding-window-instability",
+    title: "Sliding-Window Instability in Environmental Object Detection",
+    summary:
+      "Experimental research examining how an unreported inference parameter changes individual tree-crown detections despite stable aggregate counts.",
+    detail:
+      "The study treats the origin of a sliding-window inference grid as an experimental variable and investigates how apparently minor implementation choices can affect the reproducibility and identity of detections produced by environmental computer-vision systems.",
+    href: undefined,
+    comparisonFirst: true,
+    comparison: [
+      {
+        label: "ORIGINAL IMAGE",
+        src: "/images/canopy-tile.jpg",
+        alt: "Nadir aerial image of a Northern California closed conifer canopy collected by Open Forest Observatory.",
+        caption:
+          "Original aerial imagery. Northern California closed conifer canopy. Collected by Open Forest Observatory.",
+        width: 950,
+        height: 950,
+      },
+      {
+        label: "EXAMPLE DETECTION OUTPUT",
+        src: "/images/sliding-window-detections.jpg",
+        alt: "DeepForest object detections shown as red bounding boxes over a Northern California forest canopy image.",
+        caption:
+          "Example DeepForest detection output on the Open Forest Observatory canopy image.",
+        width: 1000,
+        height: 1000,
+      },
+    ],
+    figures: [
+      {
+        label: "PRELIMINARY RESULTS",
+        src: "/images/sliding-window-results.jpg",
+        alt: "Preliminary visualization comparing tree detections across sixteen sliding-window grid origins on the same aerial photograph.",
+        caption:
+          "Preliminary visualization of sixteen sliding-window origins applied to the same aerial image. Aggregate counts remain similar while the identity of individual detections changes across runs.",
+        width: 1600,
+        height: 2360,
+      },
+    ],
   },
   {
     id: "geospatial-decision-systems",
