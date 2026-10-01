@@ -16,23 +16,6 @@ function Bullets({ items }) {
   );
 }
 
-function InlineList({ items }) {
-  return (
-    <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1 list-none m-0 p-0 text-ink-muted">
-      {items.map((item, index) => (
-        <li key={item}>
-          {item}
-          {index < items.length - 1 ? (
-            <span aria-hidden="true" className="ml-3 text-rule">
-              ·
-            </span>
-          ) : null}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 export default function Work() {
   return (
     <>
@@ -54,14 +37,22 @@ export default function Work() {
         >
           <h2 className="text-2xl md:text-3xl">{entry.org}</h2>
 
-          {entry.title ? (
-            <p className="mt-3 text-sm tracking-label text-ink-muted">
-              {entry.title}
-            </p>
+          {entry.titles ? (
+            <div className="mt-3 space-y-1">
+              {entry.titles.map((title) => (
+                <p key={title} className="text-sm tracking-label text-ink-muted">
+                  {title}
+                </p>
+              ))}
+            </div>
           ) : null}
 
           {entry.description ? (
-            <p className="prose-measure mt-6">{entry.description}</p>
+            <div className="prose-measure mt-6 space-y-6">
+              {entry.description.map((paragraph) => (
+                <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+              ))}
+            </div>
           ) : null}
 
           {entry.repo ? (
@@ -78,13 +69,6 @@ export default function Work() {
           ) : null}
 
           {entry.bullets ? <Bullets items={entry.bullets} /> : null}
-
-          {entry.inlineList ? (
-            <div className="mt-8">
-              <h3 className="section-label">Responsibilities</h3>
-              <InlineList items={entry.inlineList} />
-            </div>
-          ) : null}
 
           {entry.reflection ? (
             <div className="prose-measure mt-8 space-y-6">
