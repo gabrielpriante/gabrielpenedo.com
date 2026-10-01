@@ -7,7 +7,7 @@ export const organizations = [
     org: "Frontline Gig / Frontline Labs",
     titles: [
       "Applied Data Scientist & Project Lead, Frontline Gig",
-      "Founding Applied Scientist & Lab Lead, Frontline Labs",
+      "Lab Manager & Data Lead, Frontline Labs",
     ],
     description: [
       "I lead applied data science and research initiatives spanning human-centered AI, computer vision, geospatial systems, workforce analytics, drone sensing, and field-generated data. My work combines technical development with research leadership, field operations, and collaboration with community organizations.",
