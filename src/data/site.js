@@ -2,7 +2,7 @@ export const site = {
   name: "Gabriel Penedo",
   url: "https://gabrielpenedo.com",
   email: "gps26@pitt.edu",
-  descriptor: "Environmental Computing · Machine Learning · Geospatial Systems",
+  descriptor: "Human-Centered AI | Societal Computing | Human-AI Collaboration | Sociotechnical Systems | Computer Vision & Geospatial AI | Community-Centered Technology",
   defaultDescription:
     "Gabriel Penedo is an environmental computing researcher working on reliable environmental AI, field-grounded machine learning, and geospatial decision systems.",
   links: {
