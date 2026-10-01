@@ -29,8 +29,8 @@ export const site = {
     { label: "CV", href: "/cv" },
   ],
   statement: [
-    "I am an environmental computing researcher with training in quantitative economics. My work examines how machine learning, geospatial systems, remote sensing, and field-generated data can be used to understand environmental systems and support real-world decision-making.",
-    "My current research focuses on the reliability of environmental AI, particularly how sensing conditions, preprocessing decisions, human data collection, and implementation choices influence what computational systems ultimately observe and report.",
+    "I am a human-centered AI and societal computing researcher with training in quantitative economics. My work examines how machine learning, computer vision, geospatial systems, and data-intensive tools function within real-world human systems, including how people collect data, interpret model outputs, correct errors, and make decisions alongside AI.",
+    "Much of my current work uses environmental and geospatial problems as a field-grounded setting for these questions. I am particularly interested in reliable AI, human-AI collaboration, and the design of computational systems that augment human judgment and strengthen the capacity of workers, organizations, and communities.",
   ],
   about: [
     "My path into computing began through quantitative economics and environmental analysis. During my master's training, I became increasingly interested in how computational methods could be used to study environmental problems that are spatial, uncertain, and consequential for real communities.",
